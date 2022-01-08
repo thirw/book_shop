@@ -14,6 +14,8 @@ class OrderByID {
   @JsonKey(name: 'member_id')
   final int memberId;
 
+  @JsonKey(name: 'member_name')
+  final String memberName;
 
   final List<BookOrderItem> books;
 
@@ -21,6 +23,7 @@ class OrderByID {
     this.orderId,
     this.status,
     this.memberId,
+    this.memberName,
     this.books,
   );
 

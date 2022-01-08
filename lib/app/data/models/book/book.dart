@@ -41,8 +41,7 @@ class BookOrderItem {
     this.total,
   );
 
-  factory BookOrderItem.fromJson(Map<String, dynamic> json) =>
-      _$BookOrderItemFromJson(json);
+  factory BookOrderItem.fromJson(Map<String, dynamic> json) => _$BookOrderItemFromJson(json);
 
   Map<String, dynamic> toJson(instance) => _$BookOrderItemToJson(this);
 }

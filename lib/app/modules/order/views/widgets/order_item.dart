@@ -10,7 +10,8 @@ class OrderItem extends StatelessWidget {
   const OrderItem(
       {Key? key,
       required this.totalPrice,
-      required this.orders})
+      required this.orders,
+     })
       : super(key: key);
 
   @override
@@ -27,6 +28,7 @@ class OrderItem extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            subtitle: Text('status: ${orders.status}'),
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 4),
@@ -38,15 +40,16 @@ class OrderItem extends StatelessWidget {
                         children: [
                           Text(
                             item.title,
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
                             '${item.quantity}x \$${item.price}',
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 14,
                               color: Colors.grey,
                             ),
                           )
